@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+
+# next.js build output
+.next
+out
+build
+
+# environment files (never commit)
+.env*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# misc
+.DS_Store
+npm-debug.log*
+
+# local design-check files
+.taste-skill
+shots
+
+# python cache
+__pycache__
