@@ -1,16 +1,13 @@
 # Photo credits
 
-No stock photos are used on the site yet.
+| File | Used on | Source |
+|---|---|---|
+| public/images/hero.jpg | Home page, top | Supplied by the owner (Nov 2026) |
+| public/images/work-1.jpg | Home page, photo row | Supplied by the owner (Nov 2026) |
+| public/images/work-2.jpg | Home page, photo row | Supplied by the owner (Nov 2026) |
+| public/images/work-3.jpg | Home page, photo row | Supplied by the owner (Nov 2026) |
 
-Downloads from Unsplash and Pexels were blocked in the build environment, so the
-site was designed to look complete without photos. The spaces where photos go are
-listed in `content/site.ts` under PHOTOS.
-
-When stock or real photos are added, list each one here:
-
-| File | Page link | Photographer | Licence |
-|---|---|---|---|
-| | | | |
-
-Real photos of Francois, the practice and treatments are strongly recommended:
-they build far more trust than stock photos.
+TODO: these look like stock photos. Please confirm they are licensed for
+commercial use (for example from Unsplash, Pexels or a paid stock site) and add
+the photographer and link here. Real photos of Francois and the practice will
+build the most trust: a portrait of Francois for the About page is still missing.

@@ -100,11 +100,15 @@ export const logoSrc: string | null = null;
 // ---------------------------------------------------------------------------
 
 export const photos = {
-  hero: null as string | null,
-  heroAlt: "Francois Schaap treating a patient at his practice in Rant-en-Dal, Krugersdorp",
-  about: null as string | null,
+  hero: "/images/hero.jpg" as string | null,
+  heroAlt: "Physiotherapist applying sports tape to a patient's knee on a treatment table",
+  about: null as string | null, // TODO: a portrait of Francois
   aboutAlt: "Francois Schaap, physiotherapist in Krugersdorp",
-  gallery: [] as { src: string; alt: string }[],
+  gallery: [
+    { src: "/images/work-1.jpg", alt: "Hands-on assessment of a patient's shoulder and neck" },
+    { src: "/images/work-2.jpg", alt: "Patient doing a resistance band exercise with a physiotherapist's support" },
+    { src: "/images/work-3.jpg", alt: "Physiotherapist guiding a patient's arm through a shoulder movement" },
+  ] as { src: string; alt: string }[],
 };
 
 // ---------------------------------------------------------------------------

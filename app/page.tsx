@@ -15,7 +15,7 @@ import {
   photos,
   whatsappHref,
 } from "@/content/site";
-import { ArrowRightIcon, CheckIcon, PhoneIcon, ShieldCheckIcon, WhatsAppIcon } from "@/components/icons";
+import { ArrowRightIcon, CheckIcon, ClockIcon, PhoneIcon, ShieldCheckIcon, WhatsAppIcon } from "@/components/icons";
 import { Statement } from "@/components/statement";
 import { Faq, FaqSchema } from "@/components/faq";
 import { ContactDetails } from "@/components/contact-details";
@@ -66,13 +66,32 @@ export default function HomePage() {
                 <CheckIcon />
                 11+ years of clinical practice
               </span>
+              {photos.hero ? (
+                <span className="hero__fact-mobile">
+                  <ClockIcon />
+                  First session: {hero.firstVisit.length}
+                </span>
+              ) : null}
             </p>
           </div>
 
           <div className="hero__visual" data-enter style={enter(2)}>
             {photos.hero ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={photos.hero} alt={photos.heroAlt} width={1200} height={1400} fetchPriority="high" />
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={photos.hero}
+                  alt={photos.heroAlt}
+                  width={1600}
+                  height={1066}
+                  fetchPriority="high"
+                />
+                <div className="hero__float">
+                  <p className="hero__float-label">{hero.firstVisit.title}</p>
+                  <p className="hero__float-len">{hero.firstVisit.length}</p>
+                  <p className="hero__float-text">Full assessment and your first treatment</p>
+                </div>
+              </>
             ) : (
               <div className="visit-card">
                 <div className="visit-card__top">
@@ -238,24 +257,27 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      {/* GALLERY: only shown once real photos are added in content/site.ts */}
+      {/* PHOTOS: shown when photos are listed in content/site.ts */}
       {photos.gallery.length > 0 ? (
-        <section className="section" aria-labelledby="gallery-title">
+        <section className="section section--tight-top" aria-labelledby="gallery-title">
           <div className="wrap">
-            <div className="section-head">
-              <p className="eyebrow">Our practice</p>
+            <div className="section-head section-head--split">
               <h2 id="gallery-title" className="h2">
-                Inside The Practice
+                Hands-On Care, Built Around You
               </h2>
+              <p className="lead">
+                Manual therapy, guided exercise and movement correction, matched to your body and
+                your goals.
+              </p>
             </div>
-            <div className="cards cards--3">
+            <ul className="gallery">
               {photos.gallery.map((p) => (
-                <div key={p.src} className="portrait">
+                <li key={p.src} className="gallery__item">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.src} alt={p.alt} loading="lazy" width={800} height={1000} />
-                </div>
+                  <img src={p.src} alt={p.alt} loading="lazy" width={1200} height={800} />
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
       ) : null}
